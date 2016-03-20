@@ -13,6 +13,13 @@ window.addEventListener('load', function() {
 		.addEventListener('click', dodajBarvo);
 		
 	//Odstrani barve
+	var odstrBarve = function(event) {
+		while (document.getElementById("barve").hasChildNodes()) {
+		 document.getElementById("barve").removeChild(document.getElementById("barve").firstChild);
+		}
+	}
+	
+	document.querySelector("#odstraniBarve").addEventListener('click', odstrBarve);
 	
 	//Stroboskop
 	var vrednosti = [];
